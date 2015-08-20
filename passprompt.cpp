@@ -7,7 +7,6 @@
 using namespace std;
 
 int main() {
-cout << "Enter your password: " << endl;
 
 int i = 1;
 string passRight = "mashew";
