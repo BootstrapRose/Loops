@@ -4,11 +4,12 @@
 using namespace std;
 
 int main(){
-do {
+while (inputnum != 0){
     cout << "Please enter a number." << endl;
     int inputnum;
     cin >> inputnum;
-    cout << inputnum
-    
-    
-// OHGOD WHY
+    int sum = sum + inputnum;
+    cout << sum << endl;
+}
+return 0;
+}
