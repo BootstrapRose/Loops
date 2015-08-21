@@ -3,13 +3,19 @@
 #include <iostream>
 using namespace std;
 
+int inputnum;
+int sum = 0;
+
 int main(){
-while (inputnum != 0){
+do {
     cout << "Please enter a number." << endl;
-    int inputnum;
-    cin >> inputnum;
-    int sum = sum + inputnum;
-    cout << sum << endl;
+    cin >> inputnum;    
+    sum = sum + inputnum;
+    cout << "Your new sum is " << sum << endl;
+} while (inputnum != 0);
+
+if (inputnum == 0){
+    cout << "We'll stop adding now. You reached " << sum << endl;
 }
 return 0;
 }
