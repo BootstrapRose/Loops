@@ -3,19 +3,15 @@
 #include <iostream>
 using namespace std;
 
+//function prototypes
+void votingMenu();
+void results();
+int hillaryVotes = 0, trumpVotes = 0, roseVotes = 0, userChoice = 0;
+
 int main(){
 
-int hillaryVotes = 0;
-int trumpVotes = 0;
-int roseVotes = 0;
-int userChoice = 0;
-
 do {
-cout << "Who would you like to vote for?" << endl;
-cout << "1. Hillary" << endl;
-cout << "2. Trump" << endl;
-cout << "3. Rose" << endl;
-cout << "0. stop voting" << endl;
+votingMenu();
 cin >> userChoice;
 if (userChoice == 1) {
   hillaryVotes = hillaryVotes + 1;
@@ -35,9 +31,21 @@ if (userInput == "NO"){
   cout << "Thank you for voting!" << endl;
   }
 else if (userInput == "YES"){
-  cout << "Hillary: " << hillaryVotes << endl;
-  cout << "Trump: " << trumpVotes << endl;
-  cout << "Rose: " << roseVotes << endl;
+results();
 }
 return 0;
 }
+
+void votingMenu() {
+cout << "Who would you like to vote for?" << endl;
+cout << "1. Hillary" << endl;
+cout << "2. Trump" << endl;
+cout << "3. Rose" << endl;
+cout << "0. stop voting" << endl;
+}
+
+void results() {
+  cout << "Hillary: " << hillaryVotes << endl;
+  cout << "Trump: " << trumpVotes << endl;
+  cout << "Rose: " << roseVotes << endl;
+  }
